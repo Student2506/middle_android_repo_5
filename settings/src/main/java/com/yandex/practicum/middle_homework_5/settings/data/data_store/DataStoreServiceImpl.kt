@@ -1,4 +1,4 @@
-package com.yandex.practicum.middle_homework_5.data.data_store
+package com.yandex.practicum.middle_homework_5.settings.data.data_store
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -7,7 +7,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.yandex.practicum.middle_homework_5.ui.contract.DataStoreService
+import com.yandex.practicum.middle_homework_5.settings.ui.contract.DataStoreService
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -49,7 +49,7 @@ class DataStoreServiceImpl(
         withContext(dispatcher){
             context.dataStore.data.collect { pref: Preferences ->
                 val periodic = pref[REFRESH_PERIOD_KEY] ?: SettingContainer.DEFAULT_REFRESH_PERIOD
-                val delayed = pref[FIRST_LAUNCH_DELAY_KEY] ?: SettingContainer.FIST_LAUNCH_DELAY
+                val delayed = pref[FIRST_LAUNCH_DELAY_KEY] ?: SettingContainer.FIRST_LAUNCH_DELAY
                 _settingData.value = SettingContainer(periodic = periodic, delayed = delayed)
             }
         }

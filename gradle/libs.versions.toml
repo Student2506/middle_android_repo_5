@@ -17,6 +17,8 @@ koin = "4.0.2"
 workManager = "2.10.0"
 dataStore = "1.1.2"
 ksp = "2.1.10-1.0.30"
+appcompat = "1.7.0"
+material = "1.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +47,8 @@ koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", versi
 androidx-work-manager-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workManager"}
 androidx-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore"}
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 
@@ -57,4 +61,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-kapt = { id = "kotlin-kapt" }
 kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp"}
+android-library = { id = "com.android.library", version.ref = "agp" }
 
