@@ -5,7 +5,7 @@ import org.gradle.api.Project
 
 class FindUntranslatedStringsPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-        val task = target.tasks.register("FindUntranslatedStringsTask", FindUntranslatedStringsTask::class.java)
+        val task = target.tasks.register("untranslatedStrings", FindUntranslatedStringsTask::class.java)
         task.configure {
             group = "Sprint 5"
         }

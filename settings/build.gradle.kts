@@ -7,7 +7,7 @@ plugins {
 }
 
 tasks.preBuild {
-    dependsOn("FindUntranslatedStringsTask")
+    dependsOn("untranslatedStrings")
 }
 
 android {
