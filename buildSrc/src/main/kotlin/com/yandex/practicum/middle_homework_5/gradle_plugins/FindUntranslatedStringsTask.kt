@@ -25,13 +25,13 @@ abstract class FindUntranslatedStringsTask : DefaultTask() {
             if (diff.isNotEmpty()) {
                 val stringBuilderErrorText =
                     StringBuilder("Missing translations").append(System.lineSeparator())
-                val missingNodes: MutableList<Node> = mutableListOf()
-                (0 until nodes!!.length).forEach {
-                    if (nodes.item(it).attributes?.getNamedItem("name")?.nodeValue in diff) missingNodes.add(
-                        nodes.item(it)
-                    )
-                }
-                missingNodes.forEach {
+                buildList<Node> {
+                    (0 until nodes!!.length).forEach {
+                        if (nodes.item(it).attributes?.getNamedItem("name")?.nodeValue in diff) add(
+                            nodes.item(it)
+                        )
+                    }
+                }.forEach {
                     stringBuilderErrorText.append("=== ${it.attributes?.getNamedItem("name")?.nodeValue} ===")
                         .append(System.lineSeparator()).append(it.firstChild.nodeValue)
                         .append(System.lineSeparator())
