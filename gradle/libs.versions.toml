@@ -1,21 +1,29 @@
 [versions]
-agp = "8.7.2"
-kotlin = "2.0.0"
+agp = "8.8.1"
+kotlin = "2.1.10"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
-pagingCompose = "3.3.5"
-navigationCompose = "2.8.5"
-composeBom = "2025.01.00"
+pagingCompose = "3.3.6"
+navigationCompose = "2.8.7"
+composeBom = "2025.02.00"
 gsonVersion = "2.10.1"
-roomVersion = "2.6.0"
+roomVersion = "2.6.1"
 retrofit = "2.11.0"
-koin = "4.0.2-RC3"
+koin = "4.0.2"
 workManager = "2.10.0"
-dataStore = "1.1.1"
+dataStore = "1.1.2"
+ksp = "2.1.10-1.0.30"
+appcompat = "1.7.0"
+material = "1.12.0"
+minSdk = "24"
+compileSdk = "35"
+targetSdk = "35"
+versionCode = "1"
+versionName = "1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -37,13 +45,15 @@ goodle-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gs
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
 androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "roomVersion" }
-room-kapt = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
-androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "pagingCompose"}
-squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin"}
-androidx-work-manager-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workManager"}
-androidx-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore"}
+room-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "pagingCompose" }
+squareup-retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+androidx-work-manager-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workManager" }
+androidx-data-store = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 
@@ -54,5 +64,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlin-kapt = { id = "kotlin-kapt" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+untranslated = { id = "find_untranslated_plugin" }
 

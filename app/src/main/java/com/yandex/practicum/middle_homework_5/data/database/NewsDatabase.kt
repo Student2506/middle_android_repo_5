@@ -8,6 +8,7 @@ import com.yandex.practicum.middle_homework_5.data.database.entity.RemoteKeys
 @Database(
     entities = [News::class, RemoteKeys::class],
     version = 1,
+    exportSchema = false,
 )
 abstract class NewsDatabase : RoomDatabase() {
     abstract fun getNewsDao(): NewsDao
